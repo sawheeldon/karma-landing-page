@@ -33,7 +33,58 @@ Basic rules to write CSS
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
 */
 
-body {}
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.introduction {
+    background-image: url('../images/first-background.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45.938rem;
+    overflow: auto;
+}
+
+.introduction h1 {
+    margin-top: 17.5rem;
+    font-size: 3.125rem;
+}
+
+.introduction h1,
+.introduction h3 {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+}
+
+.introduction .buttons {
+    color: white;
+    text-align: center;
+    margin-top: 1.563rem;
+    margin: 0 auto;
+}
+
+.buttons {
+    width: 9.688rem;
+    background-color: #f15a29;
+    border-color: #f15a29;
+    text-shadow: none;
+    border-style: none;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    color: white;
+    font-size: 1.125rem;
+}
 
 
 /* Header styles (Main Module)
@@ -45,12 +96,11 @@ body {}
     position: fixed;
     width: 100%;
     border-bottom: 1px solid #DDD;
+    padding: 2rem;
 }
 
-.top-navigation > content {
-    width: 970px;
+.top-navigation .content {
     height: 70px;
-    margin: 0 auto;
     padding: 0 15px;
 }
 
