@@ -136,6 +136,30 @@ div {
 (all the styles inside the < sections > or < aside > tags)
 */
 
+.content {
+    padding: 0 0.9.38rem;
+    margin: 0 auto;
+    min-width: 37.5rem,
+}
+
+.cases .content {
+    margin-top: 7.875rem;
+    text-align: center;
+}
+
+.cases .content li {
+    display: inline-block;
+    padding: 2rem;
+}
+
+.cases .content h2 {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03rem;
+    font-weight: 100;
+    -webkit-font-smoothing: antialised;
+}
+
 
 /* Footer styles (Main Module)
 (all the styles inside the < footer > tag)
