@@ -1,203 +1,261 @@
-/*
+ /*
 The CSS code gets to executed from top to bottom and left ro right
 Basic rules to write CSS
 - write GENERAL rules first (for all the paragraph tags in the website for example) and only after that write CSS for SPECIFIC tags (for example the paragraph tags inside the footer)
 - write the css styles to define for the parent (outside) container and THEN the children (inside containers) of that parent and THEN the children (inside containers) of the child above
 */
-
-
-/* CSS reset
+ /* CSS reset
 (all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
 */
 
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
-    box-sizing: border-box;
-    /*reset Chrome user agent styles*/
-    -webkit-margin-before: 0px;
-    -webkit-margin-after: 0px;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-before: 0px;
-    -webkit-padding-after: 0px;
-    -webkit-padding-start: 0px;
-    -webkit-padding-end: 0px;
-}
-
-
-/* General styles (General Module, wrapping around the modules bellow)
+ * {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+     box-sizing: border-box;
+     /*reset Chrome user agent styles*/
+     -webkit-margin-before: 0px;
+     -webkit-margin-after: 0px;
+     -webkit-margin-start: 0px;
+     -webkit-margin-end: 0px;
+     -webkit-padding-before: 0px;
+     -webkit-padding-after: 0px;
+     -webkit-padding-start: 0px;
+     -webkit-padding-end: 0px;
+ }
+ /* General styles (General Module, wrapping around the modules bellow)
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
 */
 
-body {
-    margin: 0 auto;
-    padding: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    box-sizing: border-box;
-}
+ body {
+     margin: 0 auto;
+     padding: 0;
+     font-size: 16px;
+     font: inherit;
+     vertical-align: baseline;
+     box-sizing: border-box;
+ }
 
-div {
-    display: block;
-}
+ div {
+     display: block;
+ }
 
-.introduction {
-    background-image: url('../images/first-background.jpg');
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 45.938rem;
-    overflow: auto;
-}
-
-.introduction h1 {
-    margin-top: 17.5rem;
-    font-size: 3.125rem;
-}
-
-.introduction h1,
-.introduction h3 {
-    color: white;
-    text-align: center;
-    font-weight: 300;
-}
-
-.introduction .buttons {
-    color: white;
-    text-align: center;
-    margin-top: 1.563rem;
-    margin-left: auto;
-    margin-right: auto
-}
-
-button {
-    width: 9.688rem;
-    background-color: #f15a29;
-    border-color: #f15a29;
-    text-shadow: none;
-    border-style: none;
-    border-radius: 4px;
-    padding: 1rem 1.5rem;
-    color: white;
-    font-size: 1.125rem;
-}
-
-
-/* Header styles (Main Module)
+ .content {
+     margin: 0 auto;
+     width: 70%;
+ }
+ /* Header styles (Main Module)
 (all the styles inside the < header > or < nav > tags)
 */
 
-.top-navigation {
-    background-color: #fff;
-    position: fixed;
-    width: 100%;
-    border-bottom: 1px solid #DDD;
-    padding: 0 2rem;
-    z-index: 9999;
-}
+ .top-navigation {
+     background-color: #fff;
+     position: fixed;
+     width: 100%;
+     border-bottom: 1px solid #DDD;
+     padding: 0 2rem;
+     z-index: 9999;
+ }
 
-.top-navigation .content {
-    height: 70px;
-    padding: 0 15px;
-}
+ .top-navigation .content {
+     height: 70px;
+     padding: 0 15px;
+ }
 
-.top-navigation .logo {
-    height: 4.375rem;
-}
+ .top-navigation .logo {
+     height: 4.375rem;
+ }
 
-.top-navigation .links {
-    float: right;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.04rem;
-    color: #838994;
-    letter-spacing: 0.03rem;
-    margin-top: 1.7rem;
-    margin-left: 1.563rem;
-    -webkit-font-smoothing: antialised;
-}
+ .top-navigation .links {
+     float: right;
+     font-family: 'Roboto', sans-serif;
+     font-size: 1.04rem;
+     color: #838994;
+     letter-spacing: 0.03rem;
+     margin-top: 1.7rem;
+     margin-left: 1.563rem;
+     -webkit-font-smoothing: antialised;
+ }
 
-.top-navigation .links li {
-    display: inline-block;
-    transition: 0.5s ease;
-    margin-left: 25px;
-}
+ .top-navigation .links li {
+     display: inline-block;
+     transition: 0.5s ease;
+     margin-left: 25px;
+ }
 
-.navigation .links >.active {
-    color: #4c5058;
-    font-weight: 500;
-}
+ .navigation .links >.active {
+     color: #4c5058;
+     font-weight: 500;
+ }
 
-.top-navigation .links li:hover {
-    cursor: pointer;
-    color: #333333;
-}
-
-
-/* Content styles (Main Module)
+ .top-navigation .links li:hover {
+     cursor: pointer;
+     color: #333333;
+ }
+ /* Content styles (Main Module)
 (all the styles inside the < sections > or < aside > tags)
 */
 
-.content {
-    padding: 0 0.9.38rem;
-    margin: 0 auto;
-    min-width: 37.5rem;
-    text-align: center;
-}
+ .introduction {
+     background-image: url('../images/first-background.jpg');
+     background-position: center bottom;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 45.938rem;
+     overflow: auto;
+ }
 
-.cases .content {
-    margin-top: 7.875rem;
-    text-align: center;
-}
+ .introduction h1 {
+     margin-top: 17.5rem;
+     font-size: 3.125rem;
+ }
 
-.cases .content li {
-    display: inline-block;
-    padding: 2rem;
-}
+ .introduction h1,
+ .introduction h3 {
+     color: white;
+     text-align: center;
+     font-weight: 300;
+ }
 
-.cases .content h2 {
-    font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.03rem;
-    font-weight: 100;
-    -webkit-font-smoothing: antialised;
-}
+ .introduction .buttons {
+     color: white;
+     text-align: center;
+     margin-top: 1.563rem;
+     margin-left: auto;
+     margin-right: auto
+ }
 
+ button {
+     width: 9.688rem;
+     background-color: #f15a29;
+     border-color: #f15a29;
+     text-shadow: none;
+     border-style: none;
+     border-radius: 4px;
+     padding: 1rem 1.5rem;
+     color: white;
+     font-size: 1.125rem;
+ }
 
-/* Footer styles (Main Module)
+ .cases .content {
+     margin-top: 7.875rem;
+     text-align: center;
+ }
+
+ .cases .content li {
+     display: inline-block;
+     padding: 2rem;
+ }
+
+ .cases .content h2 {
+     font-size: 2rem;
+     font-family: 'Roboto', sans-serif;
+     letter-spacing: 0.03rem;
+     font-weight: 100;
+     -webkit-font-smoothing: antialised;
+ }
+ /* Footer styles (Main Module)
 (all the styles inside the < footer > tag)
 */
 
-.social hr {
-    border: 0;
-    border-top: 1px solid #eaebec;
-    margin: 1.313rem 0;
-}
+ footer {
+     text-align: center;
+ }
 
-.social h5 {
-    text-align: center;
-    font-weight: 100;
-}
+ .social hr {
+     border: 0;
+     border-top: 1px solid #eaebec;
+     margin: 1.313rem 0;
+ }
 
-.social .icons li {
-    display: inline-block;
-    text-align: center;
-    border-radius: 1.25rem;
-    border: 1px solid black;
-    margin: 1.25rem 5px;
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.625rem 0;
-}
+ .social h5 {
+     text-align: center;
+     font-weight: 100;
+ }
 
-
-/*
+ .social .icons li {
+     display: inline-block;
+     text-align: center;
+     border-radius: 1.25rem;
+     border: 1px solid black;
+     margin: 1.25rem 5px;
+     width: 2.5rem;
+     height: 2.5rem;
+     padding: 0.625rem 0;
+ }
+ /*
 place all the desktop styles above this line
 Responsive styles
 (the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
 place all the mobile tables styles bellow this line
 */
+ /*ipad lanscape / small laptop*/
+
+ @media only screen and (max-width: 1024px) {
+     /* acting like an IF statement, the media query is a set of conditions in which the containing css will be applied
+    for example the statament above says: IF the media on which this CSS is going to used is SCREEN (Mobiles, Tables, Laptops, Desktops or Projectors) and the maximum resolution of that device is 1024px, THEN apply the body color blue for all the text
+    */
+     body {}
+     .introduction {
+         height: 38.938rem;
+     }
+     .content {
+         width: 90%;
+     }
+ }
+ /*ipad potrait*/
+
+ @media only screen and (max-width: 768px) {
+     body {
+         font-size: 12px;
+     }
+     .content {
+         width: 99%;
+     }
+     .top-navigation .links {
+         font-size: 0.8rem;
+         letter-spacing: 0rem;
+         margin-left: 0.5rem;
+     }
+     .top-navigation .links li {
+         margin-left: 10px;
+     }
+     .introduction h1 {
+         font-size: 2rem;
+     }
+     .cases .content h2 {
+         font-size: 1.5rem;
+     }
+     .cases .content li {
+         display: block;
+         padding: 2rem;
+         width: 100%;
+     }
+ }
+ /*iPhone landscape*/
+
+ @media only screen and (max-width: 480px) {
+     body {}
+     .top-navigation .links li {
+         margin-left: 3px;
+     }
+     .top-navigation .links {
+         font-size: 0.68rem;
+     }
+     .introduction {
+         height: 30rem;
+     }
+     .introduction h1 {
+         margin-top: 13rem;
+     }
+     .cases .content {
+         margin-top: 3rem;
+     }
+ }
+ /*iPhone portrait*/
+
+ @media only screen and (max-width: 320px) {
+     body {}
+ }
